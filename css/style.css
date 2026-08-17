@@ -709,7 +709,7 @@ p {
 }
 
 .team-avatar {
-  height: 160px;
+  height: 220px;
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
   display: flex;
   align-items: center;
@@ -717,6 +717,13 @@ p {
   color: white;
   font-size: 3rem;
   font-weight: 700;
+  overflow: hidden;
+}
+
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .team-info {
@@ -1244,15 +1251,17 @@ p {
   z-index: 9999;
   width: 56px;
   height: 56px;
-  background: #0068FF;
+  background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(0, 104, 255, 0.45);
+  box-shadow: 0 4px 16px rgba(0, 104, 255, 0.4);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-decoration: none;
   overflow: hidden;
+  padding: 0;
+  border: 2px solid #0068FF;
 }
 
 .zalo-float:hover {
@@ -1260,9 +1269,12 @@ p {
   box-shadow: 0 6px 24px rgba(0, 104, 255, 0.55);
 }
 
-.zalo-float svg {
-  width: 34px;
-  height: 34px;
+.zalo-float svg,
+.zalo-float img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .zalo-float .zalo-tooltip {
